@@ -4,7 +4,7 @@ def test_snap_gateway():
     client = Client(
         client_key="Vt-Client-Key",
         server_key="Vt-Server-Key",
-        environment_tyoe=PRODUCTION
+        environment_type=PRODUCTION
     )
 
     snap = gateway.Snap(client=client)

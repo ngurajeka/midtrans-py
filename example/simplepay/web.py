@@ -9,7 +9,7 @@ app = Flask(__name__)
 midtrans_client = Client(
     client_key="VT-client-IKktHiy3aRYHljsw",
     server_key="VT-server-7CVlR3AJ8Dpkez3k_TeGJQZU",
-    environment_tyoe=SANDBOX
+    environment_type=SANDBOX
 )
 
 @app.route('/')
