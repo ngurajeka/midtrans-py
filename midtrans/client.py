@@ -33,7 +33,7 @@ class Client:
             allow_redirects=True
         ).json()
 
-        if response['status_code'] == '404':
+        if response.get('status_code') != None and response['status_code'] == '404':
             raise TransactionNotFound(response['status_message'])
 
         return response
