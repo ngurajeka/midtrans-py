@@ -1,2 +1,2 @@
 from .envtype import SANDBOX, PRODUCTION
-from .client import Client, TransactionNotFound
+from .client import Client, DuplicateOrderID, TransactionNotFound

@@ -36,6 +36,9 @@ class Client:
         if response.get('status_code') != None and response['status_code'] == '404':
             raise TransactionNotFound(response['status_message'])
 
+        if response.get('status_code') != None and response['status_code'] == '406':
+            raise DuplicateOrderID(response['status_message'])
+
         return response
 
     def __repr__(self):
@@ -43,5 +46,8 @@ class Client:
 
 
 class TransactionNotFound(Exception):
+    pass
+
+class DuplicateOrderID(Exception):
     pass
 
