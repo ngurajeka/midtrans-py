@@ -10,9 +10,12 @@ class Response(object):
                  payment_type,
                  transaction_time,
                  transaction_status,
-                 fraud_status,
                  gross_amount,
 
+                 fraud_status=None,
+                 approval_code=None,
+                 point_balance_amount=0.00,
+                 point_redeem_quantity=0,
                  masked_card=None,
                  permata_va_number=None,
                  signature_key=None,
@@ -48,6 +51,9 @@ class Response(object):
         '''
         Additional fields exist on specific payment type
         '''
+        self.approval_code = approval_code
+        self.point_balance_amount = point_balance_amount
+        self.point_redeem_quantity = point_redeem_quantity
         self.masked_card = masked_card
         self.permata_va_number = permata_va_number
         self.sign_key = signature_key

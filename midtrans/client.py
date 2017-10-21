@@ -33,7 +33,15 @@ class Client:
             allow_redirects=True
         ).json()
 
+        if response['status_code'] == '404':
+            raise TransactionNotFound(response['status_message'])
+
         return response
 
     def __repr__(self):
         return ("<Midtrans.Client({0})>".format(self.environment_type.envname))
+
+
+class TransactionNotFound(Exception):
+    pass
+
