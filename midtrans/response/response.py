@@ -34,7 +34,8 @@ class Response(object):
                  page=None,
                  total_page=None,
                  total_record=None,
-                 channel_response_message=None):
+                 channel_response_message=None,
+                 channel_response_code=None):
 
         '''
         Bellow are the fields that always present in any kind of response
@@ -74,3 +75,5 @@ class Response(object):
         self.total_page = total_page
         self.total_record = total_record
         self.channel_response_message = channel_response_message
+        self.channel_response_code = channel_response_code
+
