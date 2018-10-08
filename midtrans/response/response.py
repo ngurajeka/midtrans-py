@@ -35,7 +35,10 @@ class Response(object):
                  total_page=None,
                  total_record=None,
                  channel_response_message=None,
-                 channel_response_code=None):
+                 channel_response_code=None,
+                 payment_amounts=None,
+                 va_numbers=None,
+                 currency=None):
 
         '''
         Bellow are the fields that always present in any kind of response
@@ -76,4 +79,6 @@ class Response(object):
         self.total_record = total_record
         self.channel_response_message = channel_response_message
         self.channel_response_code = channel_response_code
-
+        self.payment_amounts = payment_amounts
+        self.va_numbers = va_numbers
+        self.currency = currency
