@@ -40,7 +40,7 @@ class Response(object):
                  va_numbers=None,
                  currency=None,
                  settlement_time=None,
-                 card_type=None, ):
+                 card_type=None):
         '''
         Bellow are the fields that always present in any kind of response
         '''
