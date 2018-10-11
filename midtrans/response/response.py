@@ -39,10 +39,8 @@ class Response(object):
                  payment_amounts=None,
                  va_numbers=None,
                  currency=None,
-		 settlement_time=None,
-		 card_type=None,):
-
-
+                 settlement_time=None,
+                 card_type=None, ):
         '''
         Bellow are the fields that always present in any kind of response
         '''
@@ -85,5 +83,5 @@ class Response(object):
         self.payment_amounts = payment_amounts
         self.va_numbers = va_numbers
         self.currency = currency
-	self.settlement_time = settlement_time
-	self.card_type = card_type
+        self.settlement_time = settlement_time
+        self.card_type = card_type
